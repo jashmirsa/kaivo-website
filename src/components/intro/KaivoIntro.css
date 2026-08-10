@@ -1,0 +1,249 @@
+.kaivo-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: #050505;
+  color: #fff;
+  isolation: isolate;
+  touch-action: manipulation;
+  animation: kaivo-intro-arrive 400ms ease-out both;
+}
+
+.kaivo-intro::after {
+  position: absolute;
+  inset: 0;
+  z-index: 8;
+  background: #050505;
+  content: '';
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 520ms cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+.kaivo-intro--exiting {
+  pointer-events: none;
+}
+
+.kaivo-intro--exiting::after {
+  opacity: 0.08;
+}
+
+.kaivo-intro--exiting {
+  opacity: 0;
+  transform: scale(1.008);
+  transition: opacity 520ms cubic-bezier(0.45, 0, 0.55, 1), transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.kaivo-intro__ambient {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(117, 71, 255, 0.2) 0, rgba(91, 92, 226, 0.07) 22%, transparent 52%),
+    radial-gradient(ellipse at 50% 120%, rgba(86, 45, 190, 0.1), transparent 48%);
+  opacity: 0;
+  transform: scale(0.72);
+  animation: kaivo-ambient 3.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.kaivo-intro__grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(140, 110, 255, 0.024) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(140, 110, 255, 0.024) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(circle at center, black, transparent 68%);
+  opacity: 0;
+  animation: kaivo-grid-in 1.2s 250ms ease-out both;
+}
+
+.kaivo-pipeline {
+  position: absolute;
+  inset: -2%;
+  width: 104%;
+  height: 104%;
+  overflow: visible;
+  transform: scale(0.97);
+  animation: kaivo-camera-push 3.7s 250ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.pipe {
+  fill: none;
+  stroke: url(#kaivo-pipe-gradient);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  vector-effect: non-scaling-stroke;
+  animation: kaivo-draw-pipe 1.35s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+.pipe--main { stroke-width: 5; }
+.pipe--far { opacity: 0.46; stroke-width: 2.5; }
+.pipe--near { opacity: 0.72; stroke-width: 7; filter: blur(1.5px); }
+.pipe--one { animation-delay: 0.32s; }
+.pipe--two { animation-delay: 0.44s; }
+.pipe--three { animation-delay: 0.56s; }
+.pipe--four { animation-delay: 0.68s; }
+.pipe--five { animation-delay: 0.38s; }
+.pipe--six { animation-delay: 0.5s; }
+.pipe--seven { animation-delay: 0.7s; }
+.pipe--eight { animation-delay: 0.78s; }
+.pipe--nine { animation-delay: 0.62s; }
+.pipe--ten { animation-delay: 0.74s; }
+
+.kaivo-network {
+  fill: none;
+  stroke: #9b7aff;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 5;
+  transform-box: fill-box;
+  transform-origin: center;
+  opacity: 0;
+  animation: kaivo-network-form 1.18s 1.62s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.kaivo-network__orbit,
+.kaivo-network__glyph {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: kaivo-network-draw 850ms 1.64s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+.kaivo-network__glyph--upper { animation-delay: 1.8s; }
+.kaivo-network__glyph--lower { animation-delay: 1.92s; }
+
+.kaivo-energy {
+  fill: none;
+  stroke: url(#kaivo-energy-gradient);
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-dasharray: 0.055 0.945;
+  stroke-dashoffset: 1;
+  opacity: 0;
+  filter: url(#kaivo-soft-glow);
+  animation: kaivo-energy-run 980ms 2.18s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.kaivo-energy--right { animation-delay: 2.3s; }
+
+.kaivo-connection { opacity: 0; }
+.kaivo-connection__core { fill: #f5f0ff; filter: url(#kaivo-soft-glow); }
+.kaivo-connection__wave { fill: none; stroke: #b9a1ff; stroke-width: 2; }
+.kaivo-connection { animation: kaivo-connect 520ms 2.68s ease-out forwards; }
+.kaivo-connection__wave { animation: kaivo-connect-wave 650ms 2.68s cubic-bezier(0.16, 1, 0.3, 1) both; }
+
+.kaivo-intro__brand {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 4;
+  display: flex;
+  width: min(54vw, 410px);
+  flex-direction: column;
+  align-items: center;
+  transform: translate(-50%, -50%);
+}
+
+.kaivo-intro__wordmark {
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  filter: blur(9px);
+  transform: scale(0.94);
+  animation: kaivo-logo-resolve 760ms 2.78s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.kaivo-intro__tagline-mask {
+  overflow: hidden;
+  margin-top: clamp(14px, 2.1vh, 22px);
+}
+
+.kaivo-intro__tagline {
+  margin: 0;
+  color: rgba(241, 236, 255, 0.78);
+  font-size: clamp(0.62rem, 0.78vw, 0.75rem);
+  font-weight: 500;
+  letter-spacing: 0.62em;
+  text-indent: 0.62em;
+  transform: translateY(120%);
+  opacity: 0;
+  animation: kaivo-tagline-reveal 620ms 3.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.kaivo-intro__skip {
+  position: absolute;
+  right: max(22px, env(safe-area-inset-right));
+  bottom: max(20px, env(safe-area-inset-bottom));
+  z-index: 10;
+  border: 0;
+  background: transparent;
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.36);
+  font: inherit;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  opacity: 0;
+  text-transform: uppercase;
+  transition: color 180ms ease, opacity 300ms ease;
+}
+
+.kaivo-intro__skip--visible { opacity: 1; }
+.kaivo-intro__skip:hover, .kaivo-intro__skip:focus-visible { color: rgba(255, 255, 255, 0.82); outline: none; }
+
+.kaivo-intro__grain {
+  position: absolute;
+  inset: -50%;
+  z-index: 7;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.42'/%3E%3C/svg%3E");
+  opacity: 0.025;
+  pointer-events: none;
+  transform: translateZ(0);
+}
+
+@keyframes kaivo-intro-arrive { from { opacity: 0; } to { opacity: 1; } }
+@keyframes kaivo-ambient { 0% { opacity: 0; transform: scale(0.72); } 55% { opacity: 1; } 100% { opacity: 0.72; transform: scale(1.08); } }
+@keyframes kaivo-grid-in { to { opacity: 0.62; } }
+@keyframes kaivo-camera-push { from { transform: scale(0.97); } to { transform: scale(1); } }
+@keyframes kaivo-draw-pipe { 0% { stroke-dashoffset: 1; } 100% { stroke-dashoffset: 0; } }
+@keyframes kaivo-network-form { 0% { opacity: 0; transform: scale(1.18) rotate(-4deg); } 55% { opacity: 1; } 100% { opacity: 0.18; transform: scale(0.88) rotate(0); } }
+@keyframes kaivo-network-draw { to { stroke-dashoffset: 0; } }
+@keyframes kaivo-energy-run { 0% { opacity: 0; stroke-dashoffset: 1; } 18% { opacity: 1; } 88% { opacity: 1; } 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes kaivo-connect { 0% { opacity: 0; transform: scale(0.5); } 35% { opacity: 1; } 100% { opacity: 0; transform: scale(2.6); } }
+@keyframes kaivo-connect-wave { 0% { opacity: 0; r: 10; } 30% { opacity: 0.85; } 100% { opacity: 0; r: 92; } }
+@keyframes kaivo-logo-resolve { 0% { opacity: 0; filter: blur(9px); transform: scale(0.94); } 100% { opacity: 1; filter: blur(0); transform: scale(1); } }
+@keyframes kaivo-tagline-reveal { from { opacity: 0; letter-spacing: 0.78em; transform: translateY(120%); } to { opacity: 1; letter-spacing: 0.48em; transform: translateY(0); } }
+
+@media (max-width: 640px) {
+  .kaivo-intro__brand { width: min(68vw, 330px); }
+  .kaivo-pipeline { inset: -8%; width: 116%; height: 116%; }
+  .pipe--near { stroke-width: 5; filter: blur(1px); }
+  .kaivo-intro__skip { right: 12px; bottom: max(10px, env(safe-area-inset-bottom)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kaivo-intro,
+  .kaivo-intro__wordmark,
+  .kaivo-intro__tagline {
+    animation-duration: 650ms !important;
+    animation-iteration-count: 1 !important;
+  }
+
+  .kaivo-pipeline,
+  .kaivo-intro__grid,
+  .kaivo-connection,
+  .kaivo-energy { display: none; }
+
+  .kaivo-intro__ambient {
+    animation: none !important;
+    opacity: 0.45;
+    transform: none;
+  }
+
+  .kaivo-intro__wordmark { animation-delay: 0ms !important; }
+  .kaivo-intro__tagline { animation-delay: 120ms !important; }
+  .kaivo-intro__skip { display: none; }
+}

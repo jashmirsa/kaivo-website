@@ -1,0 +1,543 @@
+{
+  "brand": "KAIVO",
+  "version": "1.1",
+  "file_count": 134,
+  "files": [
+    {
+      "path": "01_Logos/Previews/KAIVO-Primary-black-on-ivory.png",
+      "bytes": 65002
+    },
+    {
+      "path": "01_Logos/Previews/KAIVO-Primary-gold-on-ink.png",
+      "bytes": 64262
+    },
+    {
+      "path": "01_Logos/Previews/KAIVO-Primary-white-on-ink.png",
+      "bytes": 59087
+    },
+    {
+      "path": "01_Logos/Primary/KAIVO-Primary-black-transparent.png",
+      "bytes": 49924
+    },
+    {
+      "path": "01_Logos/Primary/KAIVO-Primary-black.eps",
+      "bytes": 559
+    },
+    {
+      "path": "01_Logos/Primary/KAIVO-Primary-black.pdf",
+      "bytes": 1598
+    },
+    {
+      "path": "01_Logos/Primary/KAIVO-Primary-black.svg",
+      "bytes": 534
+    },
+    {
+      "path": "01_Logos/Primary/KAIVO-Primary-gold-transparent.png",
+      "bytes": 69847
+    },
+    {
+      "path": "01_Logos/Primary/KAIVO-Primary-gold.eps",
+      "bytes": 559
+    },
+    {
+      "path": "01_Logos/Primary/KAIVO-Primary-gold.pdf",
+      "bytes": 1600
+    },
+    {
+      "path": "01_Logos/Primary/KAIVO-Primary-gold.svg",
+      "bytes": 534
+    },
+    {
+      "path": "01_Logos/Primary/KAIVO-Primary-monochrome-transparent.png",
+      "bytes": 68499
+    },
+    {
+      "path": "01_Logos/Primary/KAIVO-Primary-monochrome.eps",
+      "bytes": 559
+    },
+    {
+      "path": "01_Logos/Primary/KAIVO-Primary-monochrome.pdf",
+      "bytes": 1600
+    },
+    {
+      "path": "01_Logos/Primary/KAIVO-Primary-monochrome.svg",
+      "bytes": 534
+    },
+    {
+      "path": "01_Logos/Primary/KAIVO-Primary-white-transparent.png",
+      "bytes": 42508
+    },
+    {
+      "path": "01_Logos/Primary/KAIVO-Primary-white.eps",
+      "bytes": 559
+    },
+    {
+      "path": "01_Logos/Primary/KAIVO-Primary-white.pdf",
+      "bytes": 1587
+    },
+    {
+      "path": "01_Logos/Primary/KAIVO-Primary-white.svg",
+      "bytes": 534
+    },
+    {
+      "path": "01_Logos/With_Tagline/KAIVO-With-Tagline-black-transparent.png",
+      "bytes": 38113
+    },
+    {
+      "path": "01_Logos/With_Tagline/KAIVO-With-Tagline-black.svg",
+      "bytes": 740
+    },
+    {
+      "path": "01_Logos/With_Tagline/KAIVO-With-Tagline-gold-transparent.png",
+      "bytes": 53799
+    },
+    {
+      "path": "01_Logos/With_Tagline/KAIVO-With-Tagline-gold.svg",
+      "bytes": 740
+    },
+    {
+      "path": "01_Logos/With_Tagline/KAIVO-With-Tagline-white-transparent.png",
+      "bytes": 30650
+    },
+    {
+      "path": "01_Logos/With_Tagline/KAIVO-With-Tagline-white.svg",
+      "bytes": 740
+    },
+    {
+      "path": "02_Icons/Concepts/KAIVO-Icon-Concept-1-Orbit-K-black-transparent.png",
+      "bytes": 50734
+    },
+    {
+      "path": "02_Icons/Concepts/KAIVO-Icon-Concept-1-Orbit-K-black.eps",
+      "bytes": 317
+    },
+    {
+      "path": "02_Icons/Concepts/KAIVO-Icon-Concept-1-Orbit-K-black.pdf",
+      "bytes": 1528
+    },
+    {
+      "path": "02_Icons/Concepts/KAIVO-Icon-Concept-1-Orbit-K-black.svg",
+      "bytes": 362
+    },
+    {
+      "path": "02_Icons/Concepts/KAIVO-Icon-Concept-1-Orbit-K-gold-transparent.png",
+      "bytes": 72123
+    },
+    {
+      "path": "02_Icons/Concepts/KAIVO-Icon-Concept-1-Orbit-K-gold.eps",
+      "bytes": 317
+    },
+    {
+      "path": "02_Icons/Concepts/KAIVO-Icon-Concept-1-Orbit-K-gold.pdf",
+      "bytes": 1526
+    },
+    {
+      "path": "02_Icons/Concepts/KAIVO-Icon-Concept-1-Orbit-K-gold.svg",
+      "bytes": 362
+    },
+    {
+      "path": "02_Icons/Concepts/KAIVO-Icon-Concept-2-Portal-O-black-transparent.png",
+      "bytes": 42460
+    },
+    {
+      "path": "02_Icons/Concepts/KAIVO-Icon-Concept-2-Portal-O-black.eps",
+      "bytes": 330
+    },
+    {
+      "path": "02_Icons/Concepts/KAIVO-Icon-Concept-2-Portal-O-black.pdf",
+      "bytes": 1611
+    },
+    {
+      "path": "02_Icons/Concepts/KAIVO-Icon-Concept-2-Portal-O-black.svg",
+      "bytes": 392
+    },
+    {
+      "path": "02_Icons/Concepts/KAIVO-Icon-Concept-2-Portal-O-gold-transparent.png",
+      "bytes": 58111
+    },
+    {
+      "path": "02_Icons/Concepts/KAIVO-Icon-Concept-2-Portal-O-gold.eps",
+      "bytes": 330
+    },
+    {
+      "path": "02_Icons/Concepts/KAIVO-Icon-Concept-2-Portal-O-gold.pdf",
+      "bytes": 1610
+    },
+    {
+      "path": "02_Icons/Concepts/KAIVO-Icon-Concept-2-Portal-O-gold.svg",
+      "bytes": 392
+    },
+    {
+      "path": "02_Icons/Concepts/KAIVO-Icon-Concept-3-Signal-KO-black-transparent.png",
+      "bytes": 60806
+    },
+    {
+      "path": "02_Icons/Concepts/KAIVO-Icon-Concept-3-Signal-KO-black.eps",
+      "bytes": 443
+    },
+    {
+      "path": "02_Icons/Concepts/KAIVO-Icon-Concept-3-Signal-KO-black.pdf",
+      "bytes": 1578
+    },
+    {
+      "path": "02_Icons/Concepts/KAIVO-Icon-Concept-3-Signal-KO-black.svg",
+      "bytes": 416
+    },
+    {
+      "path": "02_Icons/Concepts/KAIVO-Icon-Concept-3-Signal-KO-gold-transparent.png",
+      "bytes": 79296
+    },
+    {
+      "path": "02_Icons/Concepts/KAIVO-Icon-Concept-3-Signal-KO-gold.eps",
+      "bytes": 443
+    },
+    {
+      "path": "02_Icons/Concepts/KAIVO-Icon-Concept-3-Signal-KO-gold.pdf",
+      "bytes": 1577
+    },
+    {
+      "path": "02_Icons/Concepts/KAIVO-Icon-Concept-3-Signal-KO-gold.svg",
+      "bytes": 416
+    },
+    {
+      "path": "02_Icons/Selected/KAIVO-Icon-Primary-black-transparent.png",
+      "bytes": 50734
+    },
+    {
+      "path": "02_Icons/Selected/KAIVO-Icon-Primary-black.eps",
+      "bytes": 317
+    },
+    {
+      "path": "02_Icons/Selected/KAIVO-Icon-Primary-black.pdf",
+      "bytes": 1528
+    },
+    {
+      "path": "02_Icons/Selected/KAIVO-Icon-Primary-black.svg",
+      "bytes": 362
+    },
+    {
+      "path": "02_Icons/Selected/KAIVO-Icon-Primary-gold-transparent.png",
+      "bytes": 72123
+    },
+    {
+      "path": "02_Icons/Selected/KAIVO-Icon-Primary-gold.eps",
+      "bytes": 317
+    },
+    {
+      "path": "02_Icons/Selected/KAIVO-Icon-Primary-gold.pdf",
+      "bytes": 1526
+    },
+    {
+      "path": "02_Icons/Selected/KAIVO-Icon-Primary-gold.svg",
+      "bytes": 362
+    },
+    {
+      "path": "02_Icons/Selected/KAIVO-Icon-Primary-monochrome-transparent.png",
+      "bytes": 69532
+    },
+    {
+      "path": "02_Icons/Selected/KAIVO-Icon-Primary-monochrome.eps",
+      "bytes": 317
+    },
+    {
+      "path": "02_Icons/Selected/KAIVO-Icon-Primary-monochrome.pdf",
+      "bytes": 1530
+    },
+    {
+      "path": "02_Icons/Selected/KAIVO-Icon-Primary-monochrome.svg",
+      "bytes": 362
+    },
+    {
+      "path": "02_Icons/Selected/KAIVO-Icon-Primary-white-transparent.png",
+      "bytes": 43250
+    },
+    {
+      "path": "02_Icons/Selected/KAIVO-Icon-Primary-white.eps",
+      "bytes": 317
+    },
+    {
+      "path": "02_Icons/Selected/KAIVO-Icon-Primary-white.pdf",
+      "bytes": 1517
+    },
+    {
+      "path": "02_Icons/Selected/KAIVO-Icon-Primary-white.svg",
+      "bytes": 362
+    },
+    {
+      "path": "03_Favicons/favicon-128x128.png",
+      "bytes": 6426
+    },
+    {
+      "path": "03_Favicons/favicon-16x16.png",
+      "bytes": 531
+    },
+    {
+      "path": "03_Favicons/favicon-180x180.png",
+      "bytes": 10087
+    },
+    {
+      "path": "03_Favicons/favicon-32x32.png",
+      "bytes": 1057
+    },
+    {
+      "path": "03_Favicons/favicon-48x48.png",
+      "bytes": 1712
+    },
+    {
+      "path": "03_Favicons/favicon-64x64.png",
+      "bytes": 2956
+    },
+    {
+      "path": "03_Favicons/favicon-96x96.png",
+      "bytes": 4625
+    },
+    {
+      "path": "03_Favicons/favicon.ico",
+      "bytes": 14281
+    },
+    {
+      "path": "03_Favicons/favicon.svg",
+      "bytes": 409
+    },
+    {
+      "path": "04_App_Icons/KAIVO-App-Icon-Dark-1024x1024.png",
+      "bytes": 52559
+    },
+    {
+      "path": "04_App_Icons/KAIVO-App-Icon-Dark-180x180.png",
+      "bytes": 8019
+    },
+    {
+      "path": "04_App_Icons/KAIVO-App-Icon-Dark-192x192.png",
+      "bytes": 8816
+    },
+    {
+      "path": "04_App_Icons/KAIVO-App-Icon-Dark-256x256.png",
+      "bytes": 11642
+    },
+    {
+      "path": "04_App_Icons/KAIVO-App-Icon-Dark-512x512.png",
+      "bytes": 25564
+    },
+    {
+      "path": "04_App_Icons/KAIVO-App-Icon-Gold-1024x1024.png",
+      "bytes": 59674
+    },
+    {
+      "path": "04_App_Icons/KAIVO-App-Icon-Gold-180x180.png",
+      "bytes": 9210
+    },
+    {
+      "path": "04_App_Icons/KAIVO-App-Icon-Gold-192x192.png",
+      "bytes": 10001
+    },
+    {
+      "path": "04_App_Icons/KAIVO-App-Icon-Gold-256x256.png",
+      "bytes": 13432
+    },
+    {
+      "path": "04_App_Icons/KAIVO-App-Icon-Gold-512x512.png",
+      "bytes": 29184
+    },
+    {
+      "path": "05_Social/Banners/KAIVO-Facebook-Banner-Dark-1640x624.png",
+      "bytes": 71337
+    },
+    {
+      "path": "05_Social/Banners/KAIVO-Facebook-Banner-Dark-1640x624.svg",
+      "bytes": 1123
+    },
+    {
+      "path": "05_Social/Banners/KAIVO-Facebook-Banner-Light-1640x624.png",
+      "bytes": 76776
+    },
+    {
+      "path": "05_Social/Banners/KAIVO-Facebook-Banner-Light-1640x624.svg",
+      "bytes": 1127
+    },
+    {
+      "path": "05_Social/Banners/KAIVO-LinkedIn-Banner-Dark-1128x191.png",
+      "bytes": 23329
+    },
+    {
+      "path": "05_Social/Banners/KAIVO-LinkedIn-Banner-Dark-1128x191.svg",
+      "bytes": 1110
+    },
+    {
+      "path": "05_Social/Banners/KAIVO-LinkedIn-Banner-Light-1128x191.png",
+      "bytes": 25807
+    },
+    {
+      "path": "05_Social/Banners/KAIVO-LinkedIn-Banner-Light-1128x191.svg",
+      "bytes": 1114
+    },
+    {
+      "path": "05_Social/Banners/KAIVO-X-Banner-Dark-1500x500.png",
+      "bytes": 55353
+    },
+    {
+      "path": "05_Social/Banners/KAIVO-X-Banner-Dark-1500x500.svg",
+      "bytes": 1094
+    },
+    {
+      "path": "05_Social/Banners/KAIVO-X-Banner-Light-1500x500.png",
+      "bytes": 61130
+    },
+    {
+      "path": "05_Social/Banners/KAIVO-X-Banner-Light-1500x500.svg",
+      "bytes": 1098
+    },
+    {
+      "path": "05_Social/Banners/KAIVO-YouTube-Banner-Dark-2560x1440.png",
+      "bytes": 126475
+    },
+    {
+      "path": "05_Social/Banners/KAIVO-YouTube-Banner-Dark-2560x1440.svg",
+      "bytes": 1126
+    },
+    {
+      "path": "05_Social/Banners/KAIVO-YouTube-Banner-Light-2560x1440.png",
+      "bytes": 132370
+    },
+    {
+      "path": "05_Social/Banners/KAIVO-YouTube-Banner-Light-2560x1440.svg",
+      "bytes": 1130
+    },
+    {
+      "path": "05_Social/Post_Templates/KAIVO-Landscape-Post-Light-1200x628.png",
+      "bytes": 61280
+    },
+    {
+      "path": "05_Social/Post_Templates/KAIVO-Landscape-Post-Light-1200x628.svg",
+      "bytes": 1098
+    },
+    {
+      "path": "05_Social/Post_Templates/KAIVO-Square-Post-Dark-1080x1080.png",
+      "bytes": 56686
+    },
+    {
+      "path": "05_Social/Post_Templates/KAIVO-Square-Post-Dark-1080x1080.svg",
+      "bytes": 1112
+    },
+    {
+      "path": "05_Social/Profile/KAIVO-Profile-Dark-1080x1080.png",
+      "bytes": 56761
+    },
+    {
+      "path": "05_Social/Profile/KAIVO-Profile-Dark-400x400.png",
+      "bytes": 19058
+    },
+    {
+      "path": "05_Social/Profile/KAIVO-Profile-Dark-800x800.png",
+      "bytes": 40237
+    },
+    {
+      "path": "05_Social/Profile/KAIVO-Profile-Gold-1080x1080.png",
+      "bytes": 63924
+    },
+    {
+      "path": "05_Social/Profile/KAIVO-Profile-Gold-400x400.png",
+      "bytes": 21975
+    },
+    {
+      "path": "05_Social/Profile/KAIVO-Profile-Gold-800x800.png",
+      "bytes": 45430
+    },
+    {
+      "path": "06_Stationery/Business_Cards/KAIVO-Business-Card-Back-300dpi.png",
+      "bytes": 40781
+    },
+    {
+      "path": "06_Stationery/Business_Cards/KAIVO-Business-Card-Back.svg",
+      "bytes": 1057
+    },
+    {
+      "path": "06_Stationery/Business_Cards/KAIVO-Business-Card-Front-300dpi.png",
+      "bytes": 37645
+    },
+    {
+      "path": "06_Stationery/Business_Cards/KAIVO-Business-Card-Front.svg",
+      "bytes": 1087
+    },
+    {
+      "path": "06_Stationery/Business_Cards/KAIVO-Business-Card-Mockup.png",
+      "bytes": 162526
+    },
+    {
+      "path": "06_Stationery/Business_Cards/KAIVO-Business-Cards-Print.pdf",
+      "bytes": 2833
+    },
+    {
+      "path": "06_Stationery/Email_Signature/KAIVO-Email-Signature-Plain-Text.txt",
+      "bytes": 84
+    },
+    {
+      "path": "06_Stationery/Email_Signature/KAIVO-Email-Signature-Preview.png",
+      "bytes": 15633
+    },
+    {
+      "path": "06_Stationery/Email_Signature/KAIVO-Email-Signature.html",
+      "bytes": 859
+    },
+    {
+      "path": "06_Stationery/Letterhead/KAIVO-Letterhead-A4-Editable.docx",
+      "bytes": 84311
+    },
+    {
+      "path": "06_Stationery/Letterhead/KAIVO-Letterhead-A4.pdf",
+      "bytes": 2430
+    },
+    {
+      "path": "06_Stationery/Letterhead/KAIVO-Letterhead-US-Letter-Editable.docx",
+      "bytes": 84310
+    },
+    {
+      "path": "06_Stationery/Letterhead/KAIVO-Letterhead-US-Letter.pdf",
+      "bytes": 2426
+    },
+    {
+      "path": "07_Presentation/KAIVO-Presentation-Cover-1.png",
+      "bytes": 62901
+    },
+    {
+      "path": "07_Presentation/KAIVO-Presentation-Cover-2.png",
+      "bytes": 90163
+    },
+    {
+      "path": "07_Presentation/KAIVO-Presentation-Cover-3.png",
+      "bytes": 49795
+    },
+    {
+      "path": "07_Presentation/KAIVO-Presentation-Covers-Editable.pptx",
+      "bytes": 283980
+    },
+    {
+      "path": "08_Guidelines/KAIVO-Brand-Guidelines.pdf",
+      "bytes": 600666
+    },
+    {
+      "path": "09_UI_Tokens/kaivo.css",
+      "bytes": 713
+    },
+    {
+      "path": "09_UI_Tokens/kaivo.tokens.json",
+      "bytes": 2194
+    },
+    {
+      "path": "09_UI_Tokens/tailwind-theme-snippet.js",
+      "bytes": 313
+    },
+    {
+      "path": "10_Licensing_and_Sources/Open-Font-Sources.txt",
+      "bytes": 247
+    },
+    {
+      "path": "10_Licensing_and_Sources/Trademark-and-Usage-Note.txt",
+      "bytes": 283
+    },
+    {
+      "path": "README-FIRST.txt",
+      "bytes": 1901
+    }
+  ]
+}

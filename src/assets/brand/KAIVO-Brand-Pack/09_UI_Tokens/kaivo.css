@@ -1,0 +1,17 @@
+:root {
+  --kaivo-ink: #0A0B0D;
+  --kaivo-white: #FFFFFF;
+  --kaivo-ivory: #F7F4EE;
+  --kaivo-gold: #C7A566;
+  --kaivo-slate: #6F7680;
+  --kaivo-indigo: #5B5CE2;
+  --kaivo-surface: #F2EFE9;
+  --kaivo-border: #D9D6CF;
+  --kaivo-font-display: "Space Grotesk", "Manrope", Arial, sans-serif;
+  --kaivo-font-body: Inter, Arial, sans-serif;
+  --kaivo-space-1: 4px; --kaivo-space-2: 8px; --kaivo-space-3: 12px; --kaivo-space-4: 16px;
+  --kaivo-space-6: 24px; --kaivo-space-8: 32px; --kaivo-space-12: 48px; --kaivo-space-16: 64px;
+  --kaivo-radius-sm: 6px; --kaivo-radius-md: 10px; --kaivo-radius-lg: 16px;
+  --kaivo-shadow-md: 0 10px 30px rgba(10,11,13,.12);
+  --kaivo-ease: cubic-bezier(.2,.8,.2,1);
+}

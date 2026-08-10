@@ -1,0 +1,4 @@
+Space Grotesk — https://github.com/floriankarsten/space-grotesk — SIL OFL 1.1
+Inter — https://github.com/rsms/inter — SIL OFL 1.1
+Manrope — https://github.com/davelab6/manrope — SIL OFL 1.1
+SIL OFL — https://openfontlicense.org/
