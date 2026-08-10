@@ -1,5 +1,6 @@
 import '@supabase/functions-js/edge-runtime.d.ts'
 import { withSupabase } from '@supabase/server'
+import type { Database } from '../_shared/database.types.ts'
 
 type AccessAction = 'invite_member' | 'resend_invitation' | 'send_password_reset' | 'disable_user' | 'enable_user' | 'suspend_organization' | 'reactivate_organization'
 type AccessRequest = {
@@ -12,12 +13,29 @@ type AccessRequest = {
   redirectTo?: string
 }
 
+const allowedRedirectOrigins = new Set([
+  'https://kaivo.co.za',
+  'https://www.kaivo.co.za',
+  'http://localhost:5173',
+  'http://127.0.0.1:5173',
+])
+
+const allowedRedirect = (value?: string) => {
+  if (!value) return false
+  try {
+    const url = new URL(value)
+    return allowedRedirectOrigins.has(url.origin) && url.pathname === '/reset-password'
+  } catch {
+    return false
+  }
+}
+
 const fail = (message: string, status = 400) => Response.json({ error: message }, { status })
 
 export default {
-  fetch: withSupabase({ auth: 'user' }, async (req, ctx) => {
+  fetch: withSupabase<Database>({ auth: 'user' }, async (req, ctx) => {
     if (req.method !== 'POST') return fail('Method not allowed', 405)
-    const callerId = ctx.userClaims?.sub
+    const callerId = ctx.userClaims?.id
     if (!callerId) return fail('Authentication required', 401)
 
     let payload: AccessRequest
@@ -45,6 +63,7 @@ export default {
       const email = payload.email?.trim().toLowerCase()
       const fullName = payload.fullName?.trim()
       if (!email || !fullName || !payload.role || !payload.redirectTo) return fail('Name, email, role and redirect URL are required')
+      if (!allowedRedirect(payload.redirectTo)) return fail('Invalid invitation redirect URL')
       const { data: existing } = await ctx.supabaseAdmin.from('profiles').select('id,status').ilike('email', email).maybeSingle()
       let userId = existing?.id as string | undefined
       if (!userId) {
@@ -64,8 +83,25 @@ export default {
     if (targetUserId) {
       const { data } = await ctx.supabaseAdmin.from('profiles').select('email').eq('id', targetUserId).single()
       targetEmail = data?.email
+    } else if (targetEmail) {
+      const { data } = await ctx.supabaseAdmin.from('profiles').select('id,email').ilike('email', targetEmail).maybeSingle()
+      targetUserId = data?.id
+      targetEmail = data?.email
     }
-    if (!targetEmail) return fail('A target user or email is required')
+    if (!targetUserId || !targetEmail) return fail('A valid organization user is required')
+
+    const { data: targetMembership } = await ctx.supabaseAdmin
+      .from('organization_members')
+      .select('role,status')
+      .eq('organization_id', payload.organizationId)
+      .eq('user_id', targetUserId)
+      .maybeSingle()
+    if (!targetMembership) return fail('The target user does not belong to this organization', 403)
+    if (!isAdmin && targetMembership.role === 'owner') return fail('Managers cannot administer an owner', 403)
+
+    if (['resend_invitation', 'send_password_reset'].includes(payload.action) && !allowedRedirect(payload.redirectTo)) {
+      return fail('Invalid access email redirect URL')
+    }
 
     if (payload.action === 'resend_invitation') {
       const { error } = await ctx.supabaseAdmin.auth.resend({ type: 'signup', email: targetEmail, options: { emailRedirectTo: payload.redirectTo } })
@@ -74,9 +110,6 @@ export default {
       const { error } = await ctx.supabaseAdmin.auth.resetPasswordForEmail(targetEmail, { redirectTo: payload.redirectTo })
       if (error) return fail('Password reset could not be sent', 502)
     } else if (payload.action === 'disable_user' || payload.action === 'enable_user') {
-      if (!targetUserId) return fail('A target user ID is required')
-      const { data: targetMembership } = await ctx.supabaseAdmin.from('organization_members').select('role').eq('organization_id', payload.organizationId).eq('user_id', targetUserId).single()
-      if (!isAdmin && targetMembership?.role === 'owner') return fail('Managers cannot disable an owner', 403)
       const disabled = payload.action === 'disable_user'
       const { error } = await ctx.supabaseAdmin.auth.admin.updateUserById(targetUserId, { ban_duration: disabled ? '876000h' : 'none' })
       if (error) return fail('User access could not be updated', 500)

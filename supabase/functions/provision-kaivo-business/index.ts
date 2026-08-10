@@ -1,5 +1,6 @@
 import '@supabase/functions-js/edge-runtime.d.ts'
 import { withSupabase } from '@supabase/server'
+import type { Database } from '../_shared/database.types.ts'
 
 type ProvisionRequest = {
   business: {
@@ -20,10 +21,17 @@ type ProvisionRequest = {
   redirectTo: string
 }
 
+const allowedRedirectOrigins = new Set([
+  'https://kaivo.co.za',
+  'https://www.kaivo.co.za',
+  'http://localhost:5173',
+  'http://127.0.0.1:5173',
+])
+
 const allowedRedirect = (value: string) => {
   try {
     const url = new URL(value)
-    return url.protocol === 'https:' || (url.protocol === 'http:' && ['localhost', '127.0.0.1'].includes(url.hostname))
+    return allowedRedirectOrigins.has(url.origin) && url.pathname === '/reset-password'
   } catch {
     return false
   }
@@ -39,10 +47,10 @@ const slugify = (value: string) => value
 const fail = (message: string, status = 400) => Response.json({ error: message }, { status })
 
 export default {
-  fetch: withSupabase({ auth: 'user' }, async (req, ctx) => {
+  fetch: withSupabase<Database>({ auth: 'user' }, async (req, ctx) => {
     if (req.method !== 'POST') return fail('Method not allowed', 405)
 
-    const callerId = ctx.userClaims?.sub
+    const callerId = ctx.userClaims?.id
     if (!callerId) return fail('Authentication required', 401)
 
     const { data: caller, error: callerError } = await ctx.supabaseAdmin
@@ -142,7 +150,7 @@ export default {
       ctx.supabaseAdmin.from('profiles').update({ full_name: ownerName, phone: payload.owner.phone?.trim() || null }).eq('id', ownerId),
       ctx.supabaseAdmin.from('organization_settings').insert({ organization_id: organization.id }),
       ctx.supabaseAdmin.from('brand_guidelines').insert({ organization_id: organization.id, brand_description: payload.business.brandDescription?.trim() ?? '' }),
-      ctx.supabaseAdmin.from('social_accounts').insert(['instagram', 'facebook', 'tiktok'].map((provider) => ({ organization_id: organization.id, provider }))),
+      ctx.supabaseAdmin.from('social_accounts').insert((['instagram', 'facebook', 'tiktok'] as const).map((provider) => ({ organization_id: organization.id, provider }))),
     ])
 
     if (setupResults.some((result) => result.error)) {
